@@ -98,7 +98,8 @@ def flux(T, wl):
 
 
 if __name__ == '__main__':
-    T = int(sys.argv[1])
+    name = sys.argv[1]
+    T = int(name)
     flux_wl = {}  # Stores flux (SI unit), wavelength (nanometres) pairs.
 
     # Min and max wavelength values in nanometres.
@@ -149,5 +150,5 @@ if __name__ == '__main__':
     plt.title('Flux vs Wavelength graph for a blackbody for constant temperature T\
 = ' + str(T) + 'K', fontsize=7)
     plt.show()
-    plt.savefig('Flux vs. Wavelength.png')
+    plt.savefig('Flux vs. Wavelength: ' + name + 'K.png')
     plt.close()
